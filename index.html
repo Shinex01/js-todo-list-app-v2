@@ -4,17 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/main.js"></script>
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <main class="toDoApp">
-      <h1>To-Do List</h1>
+      <h1>
+        <span class="notes">📝</span>
+        My To-Do List
+      </h1>
+      <p class="h1-p">Taking one step at a time.</p>
       <div class="input-row">
         <input placeholder="Add list..." type="text" id="inputTask" />
         <button type="button" class="add-btn">Add</button>
       </div>
+      <div class="filters">
+        <button class="filter-btn selected" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <div class="counter-row">
+        <p id="taskCount"></p>
+        <button id="clearCompleted" class="clear-btn">Clear Completed</button>
+      </div>
       <ul id="taskList"></ul>
+      <p id="emptyMessage" class="empty-message">
+        No tasks yet. Add your first task!
+      </p>
+      <p class="manually">Do Things Manually.</p>
     </main>
   </body>
 </html>
